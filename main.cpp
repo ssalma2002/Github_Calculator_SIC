@@ -1,19 +1,27 @@
 #include <iostream>
 using namespace std;
-int main(){
-    int num;
-    cout<<"please enter a number"<<endl;
-    cin>>num;
-    if(num ==1){
-        add()
-    }
-    else if(num ==2){
-        subtract()
-    }
-    else if(num ==3){
-        multiply()
-    }
-    else if(num ==4){
-        divide()
-    }
+#include "header.h"
+int main() {
+    int num1, num2, result = 0;
+    char oper;
+
+    cout << "Enter your equation ex (2 + 3)\n";
+    cin >> num1 >> oper >> num2;
+
+    if (oper == '+') {
+        result = add(num1, num2);
+    } else if (oper == '-') {
+        result = subtract(num1, num2);
+    
+    } else if (oper == '*') {
+        result = multiplication(num1, num2);
+    
+    } else if (oper == '/') {
+        result = division(num1, num2);
+    
+    } 
+
+    cout << "Result: " << result << endl;
+
+    return 0;
 }
